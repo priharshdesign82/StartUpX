@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Dark mode automatically apply hoga
+[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
