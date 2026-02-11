@@ -1,0 +1,278 @@
+// ============================================
+// PACKFLOW - VARIABLES SCSS
+// SIRF $primary CHANGE KARO - BAAKI AUTOMATIC
+// ============================================
+
+// ====== 1. BRAND COLOR (SIRF YAHI CHANGE KARO) ======
+$primary: #7C3AED !default; // ← PURPLE COLOR - Tumhare hero me jo use ho raha hai
+
+// ====== 2. STATUS COLORS ======
+$success: #10B981 !default;
+$info: #3B82F6 !default;  
+$warning: #F59E0B !default;
+$danger: #EF4444 !default;
+$light: #F8FAFC !default;
+$dark: #0F172A !default;
+
+// ====== 3. AUTO-GENERATED FROM PRIMARY ======
+$primary-light: lighten($primary, 15%) !default;
+$primary-dark: darken($primary, 15%) !default;
+$primary-bg: lighten($primary, 42%) !default;
+
+// Accent Color - Pink color rakho taki hero ke gradient match kare
+$accent: #EC4899 !default; // ← Pink color direct rakho
+$accent-light: lighten($accent, 15%) !default;
+$accent-dark: darken($accent, 15%) !default;
+
+// ====== 4. CSS CUSTOM PROPERTIES (YEH USE KARNA HAI HTML/CSS MEIN) ======
+:root {
+  // RGB Variables for rgba() use - ADD KIYE HAI YE
+  --primary-rgb: #{red($primary)}, #{green($primary)}, #{blue($primary)};
+  --accent-rgb: #{red($accent)}, #{green($accent)}, #{blue($accent)};
+  --bg-rgb: 255, 255, 255;
+  --surface-rgb: 248, 250, 252;
+  --border-rgb: 226, 232, 240;
+  
+  // Brand Colors
+  --primary: #{$primary};
+  --primary-light: #{$primary-light};
+  --primary-dark: #{$primary-dark};
+  --primary-bg: #{$primary-bg};
+  
+  --accent: #{$accent};
+  --accent-light: #{$accent-light};
+  --accent-dark: #{$accent-dark};
+  
+  // Status Colors
+  --success: #{$success};
+  --success-light: #{lighten($success, 35%)};
+  --success-rgb: #{red($success)}, #{green($success)}, #{blue($success)};
+  --info: #{$info};
+  --info-light: #{lighten($info, 35%)};
+  --warning: #{$warning};
+  --warning-light: #{lighten($warning, 35%)};
+  --danger: #{$danger};
+  --danger-light: #{lighten($danger, 35%)};
+  
+  // Theme Colors - Light Mode (Default)
+  --bg: #FFFFFF;
+  --text: #0F172A;
+  --text-secondary: #64748B;
+  --border: #E2E8F0;
+  --surface: #F8FAFC;
+  --card: #FFFFFF;
+  
+  // Gray Scale
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+  
+  // Typography
+  --font-base: 'Inter', -apple-system, sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  
+  // Spacing
+  --space-1: 0.25rem;  // 4px
+  --space-2: 0.5rem;   // 8px
+  --space-3: 1rem;     // 16px
+  --space-4: 1.5rem;   // 24px
+  --space-5: 2rem;     // 32px
+  --space-6: 3rem;     // 48px
+  --space-7: 4rem;     // 64px
+  --space-8: 5rem;     // 80px
+  
+  // Border Radius
+  --radius-sm: 0.375rem;
+  --radius: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  // Transitions
+  --transition: all 0.2s ease-in-out;
+  --transition-fast: all 0.1s ease-in-out;
+  --transition-slow: all 0.3s ease-in-out;
+}
+
+// ====== 5. DARK THEME OVERRIDES ======
+[data-theme="dark"] {
+  // RGB Variables for dark mode
+  --primary-rgb: #{red(lighten($primary, 10%))}, #{green(lighten($primary, 10%))}, #{blue(lighten($primary, 10%))};
+  --accent-rgb: #{red(lighten($accent, 10%))}, #{green(lighten($accent, 10%))}, #{blue(lighten($accent, 10%))};
+  --bg-rgb: 15, 23, 42;
+  --surface-rgb: 30, 41, 59;
+  --border-rgb: 51, 65, 85;
+  
+  // Brand Colors
+  --primary: #{lighten($primary, 10%)};
+  --primary-light: #{lighten($primary, 20%)};
+  --primary-bg: #{transparentize($primary, 0.88)};
+  
+  --accent: #{lighten($accent, 10%)};
+  --accent-light: #{lighten($accent, 20%)};
+  
+  // Status Colors
+  --success: #{lighten($success, 10%)};
+  --success-light: #{transparentize($success, 0.88)};
+  --success-rgb: #{red(lighten($success, 10%))}, #{green(lighten($success, 10%))}, #{blue(lighten($success, 10%))};
+  --info: #{lighten($info, 10%)};
+  --info-light: #{transparentize($info, 0.88)};
+  --warning: #{lighten($warning, 10%)};
+  --warning-light: #{transparentize($warning, 0.88)};
+  --danger: #{lighten($danger, 10%)};
+  --danger-light: #{transparentize($danger, 0.88)};
+  
+  // Theme Colors
+  --bg: #0F172A;
+  --text: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border: #334155;
+  --surface: #1E293B;
+  --card: #1E293B;
+  
+  // Gray Scale (Dark Mode)
+  --gray-50: #0F172A;
+  --gray-100: #1E293B;
+  --gray-200: #334155;
+  --gray-300: #475569;
+  --gray-400: #64748B;
+  --gray-500: #94A3B8;
+  --gray-600: #CBD5E1;
+  --gray-700: #E2E8F0;
+  --gray-800: #F1F5F9;
+  --gray-900: #F8FAFC;
+  
+  // Shadows (Lighter in dark mode)
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+// ====== 6. BOOTSTRAP THEME INTEGRATION ======
+[data-bs-theme="light"] {
+  // Bootstrap Variables
+  --bs-primary: #{$primary};
+  --bs-primary-rgb: #{red($primary)}, #{green($primary)}, #{blue($primary)};
+  --bs-primary-bg-subtle: #{$primary-bg};
+  
+  --bs-success: #{$success};
+  --bs-info: #{$info};
+  --bs-warning: #{$warning};
+  --bs-danger: #{$danger};
+  
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-secondary-color: var(--text-secondary);
+  --bs-border-color: var(--border);
+  
+  // Bootstrap Components
+  .btn-primary {
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--primary-dark);
+    --bs-btn-hover-border-color: var(--primary-dark);
+    --bs-btn-active-bg: var(--primary-dark);
+    --bs-btn-active-border-color: var(--primary-dark);
+  }
+  
+  .btn-outline-primary {
+    --bs-btn-color: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--primary);
+    --bs-btn-hover-border-color: var(--primary);
+  }
+}
+
+[data-bs-theme="dark"] {
+  // Bootstrap Variables (Dark Mode)
+  --bs-primary: #{lighten($primary, 10%)};
+  --bs-primary-rgb: #{red(lighten($primary, 10%))}, #{green(lighten($primary, 10%))}, #{blue(lighten($primary, 10%))};
+  --bs-primary-bg-subtle: #{transparentize($primary, 0.88)};
+  
+  --bs-success: #{lighten($success, 10%)};
+  --bs-info: #{lighten($info, 10%)};
+  --bs-warning: #{lighten($warning, 10%)};
+  --bs-danger: #{lighten($danger, 10%)};
+  
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-secondary-color: var(--text-secondary);
+  --bs-border-color: var(--border);
+  
+  // Dark mode adjustments
+  .navbar {
+    --bs-navbar-color: var(--text);
+    --bs-navbar-hover-color: var(--primary);
+    --bs-navbar-active-color: var(--primary);
+  }
+  
+  .dropdown-menu {
+    --bs-dropdown-bg: var(--surface);
+    --bs-dropdown-color: var(--text);
+    --bs-dropdown-border-color: var(--border);
+  }
+}
+
+// ====== 7. TYPOGRAPHY VARIABLES (For SCSS use only) ======
+$font-family-base: var(--font-base) !default;
+$font-family-heading: var(--font-heading) !default;
+
+$font-size-xs:   0.75rem !default;
+$font-size-sm:   0.875rem !default;
+$font-size-base: 1rem !default;
+$font-size-lg:   1.125rem !default;
+$font-size-xl:   1.25rem !default;
+$font-size-xxl:  1.5rem !default;
+$font-size-xxxl: 2rem !default;
+
+// ====== 8. SPACING (For SCSS use only) ======
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: var(--space-1),
+  2: var(--space-2),
+  3: var(--space-3),
+  4: var(--space-4),
+  5: var(--space-5),
+  6: var(--space-6),
+  7: var(--space-7),
+  8: var(--space-8)
+) !default;
+
+// ====== 9. BREAKPOINTS ======
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
+$breakpoint-xxl: 1400px !default;
+
+// ====== 10. EXTRA UTILITY VARIABLES ======
+// Scroll offset for fixed header
+$header-height: 80px !default;
+
+// Animation durations
+$animation-fast: 150ms !default;
+$animation-normal: 300ms !default;
+$animation-slow: 500ms !default;
+
+// Z-index layers
+$z-header: 1000 !default;
+$z-dropdown: 1050 !default;
+$z-modal: 1100 !default;
+$z-tooltip: 1200 !default;

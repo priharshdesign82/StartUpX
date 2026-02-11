@@ -1,0 +1,18 @@
+// main.scss
+@import 'variables';     // Variables first
+@import 'global';       // Global styles
+@import 'components';   // Button & Card components
+@import 'header';       // Header styles
+@import 'hero';         // Hero section styles
+@import 'features';     // Features section
+@import 'templates';     // templates section
+@import 'pricing'; // Testimonials
+@import 'pricing'; // Testimonials
+@import 'success'; // Testimonials
+@import 'resources'; // Testimonials
+@import 'team'; // Testimonials
+@import 'awards'; // Testimonials
+@import 'contact'; // Testimonials
+@import 'cta';          // Call-to-action
+@import 'footer';       // Footer
+@import 'utilities';    // Utilities last
