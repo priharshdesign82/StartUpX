@@ -598,6 +598,7 @@
           background: white;
           color: var(--primary);
           border: none;
+          margin-bottom: 5px;
 
           &:hover {
             background: rgba(255, 255, 255, 0.9);
@@ -608,6 +609,7 @@
 
         &.btn-outline-light {
           border: 2px solid white;
+          margin-bottom: 5px;
 
           &:hover {
             background: rgba(255, 255, 255, 0.1);
