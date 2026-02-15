@@ -159,31 +159,31 @@
               <p>After unzipping the package, you'll see this organized structure:</p>
               
 <pre class="prettyprint">
-startupx-pro/
+
+StartUpX/
 │
-├── 📄 index.html                # Main
+├── index.html                 # Main HTML file
 │
-├── 📁 css/
-│   ├── style.css                # Main CSS (compiled)
-│   ├── style.min.css            # Minified version
-│   └── bootstrap.min.css        # Bootstrap 5 core
+├── assets/
+│   │
+│   ├── css/
+│   │   ├── style.css          # Main compiled CSS
+│   │   ├── style.min.css      # Minified CSS version
+│   │   └── bootstrap.min.css  # Bootstrap 5 core CSS
+│   │
+│   ├── js/
+│   │   ├── app.js             # Custom JavaScript
+│   │   └── bootstrap.min.js   # Bootstrap 5 JS
+│   │
+│   ├── scss/
+│   │   ├── style.scss         # Main SCSS source file
+│   │   ├── _variables.scss    # Colors, fonts & global variables
+│   │   ├── _components.scss   # Reusable UI components
+│   │   └── _dark-mode.scss    # Dark mode styles
+│   │
+│   └── images/                # All images & icons
 │
-├── 📁 js/
-│   ├── app.js                   # Custom JS
-│   ├── dashboard.js             # Analytics scripts
-│   ├── bootstrap.min.js         # Bootstrap JS
-│   └── chart.js                 # Charts library
-│
-├── 📁 scss/
-│   ├── style.scss               # Main SCSS source
-│   ├── _variables.scss          # Colors, fonts, variables
-│   ├── _components.scss         # Reusable components
-│   └── _dark-mode.scss          # Dark mode styles
-│
-├── 📁 images/                    # All images & icons
-│   └── All Images
-│
-└── 📁 documentation/             # This documentation
+└── documentation/             # Documentation files
 </pre>
 
               <div class="alert alert-info mt-3">
